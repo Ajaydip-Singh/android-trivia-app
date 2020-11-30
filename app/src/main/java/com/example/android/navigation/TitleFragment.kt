@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.example.android.navigation.databinding.FragmentTitleBinding
 
 
@@ -22,7 +23,14 @@ class TitleFragment : Fragment() {
                 container,
                 false
         )
+
+        binding.playButton.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_titleFragment2_to_gameFragment)
+        )
+
         return binding.root
     }
+
+
 
 }
